@@ -1,0 +1,27 @@
+Hello,
+I would need to do the following in Java
+
+a. The following functional requirements:
+
+i. Enter the data of customers, rooms and reservations.
+The data entry can be done through the console.
+
+ii. Perform the necessary checks to ensure that a room cannot 
+    be entered with the same room number or
+    a customer with the same ID.
+
+iii. Check, at the time of creating a reservation, 
+    the availability of rooms taking into account the check-in and 
+    check-out dates and the type of room requested by the customer.
+
+iv. Make the following listings:
+1. Rooms available by room type between a given period.
+2. Bookings made between a given period.
+3. Bookings by clients within a given period.
+
+It should be noted that the dimensions of each room are different, 
+therefore one of the room attributes should be the square metres (M2 attribute) of the room.
+
+b. The following implementation requirements:
+■ The classes specified in the case study diagram. 
+are the only ones to be implemented, apart from the class that starts the applica

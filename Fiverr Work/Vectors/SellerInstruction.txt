@@ -1,0 +1,17 @@
+I have placed a video for running proj5.cpp file.
+Do watch that video to how to run file 
+If you already know then no need to watch 
+
+COMMANDS ARE 
+*****
+
+g++ -o proj5 proj5.cpp
+./proj5 data1.txt
+
+*****
+
+
+
+if you want to file by run and compile main then go to main.cpp file and run that file 
+it will asked first file name then it will execute program. 
+if you are okay with proj5.cpp file than it's okay you can delete  main.cpp file.

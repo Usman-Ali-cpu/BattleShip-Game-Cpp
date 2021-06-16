@@ -1,0 +1,87 @@
+
+
+class File{
+protected:
+    vector<string> reader(const string & fileName) {
+		ifstream file;
+		file.open(fileName);
+		string data;
+		vector<string> result;
+		while (file.is_open() && !file.eof()) {
+			getline(file, data);
+			if (!data.empty()) {
+				result.push_back(data);
+			}
+		}
+		if(file.is_open())
+			file.close();
+		return result;
+	}
+	void writer(const string & fileName, const vector<string>& data) {
+		ofstream file;
+		file.open(fileName, ios::app);
+		if (file.is_open()) {
+			for (string s : data) {
+				file << s + "\n";
+			}
+			file.close();
+		}
+	}
+    void clearwriter(const string & fileName, const vector<string>& data){
+        ofstream file;
+		file.open(fileName);
+		if (file.is_open()) {
+			for (string s : data) {
+				file << s + "\n";
+			}
+			file.close();
+		}
+    }
+};
+
+
+
+ vector<string> get = readMedicine();
+        for(string s : get){
+            for (int i = 0; i < 4; i++){
+                int index = s.find_first_of(',');
+                switch (i)
+                {
+                case 0:
+                    medicineID = stoi(s.substr(0, index));
+                    break;
+                case 1:
+                    medicineName = s.substr(0, index);
+                    break;
+                case 2:
+                    medicinePrice = stod(s.substr(0, index) );
+                    break;
+                case 3:
+                    medicineStockCount = stoi(s.substr(0, index));
+                    break;
+                }
+                s.erase(0, index + 1);
+            }
+            for (int i = 0; i < 4; i++){
+                switch (i)
+                {
+                case 0:
+                    cout <<"\t "<< medicineID <<"  \t    ";
+                    break;
+                case 1:
+                    cout <<"\t " << medicineName  <<"  \t   ";
+                    break;
+                case 2:
+                    cout <<"\t "<< medicinePrice <<"  \t    ";
+                    break;
+                case 3:
+                    cout <<"\t "<< medicineStockCount  <<"  \t    " << endl;
+                    break;
+                }
+            }
+        }
+
+
+
+
+
