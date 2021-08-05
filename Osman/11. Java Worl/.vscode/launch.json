@@ -1,0 +1,56 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch AreaPerimeter",
+            "request": "launch",
+            "mainClass": "AreaPerimeter",
+            "projectName": "11. Java Worl_9618ad81"
+        },
+        {
+            "type": "java",
+            "name": "Launch Average",
+            "request": "launch",
+            "mainClass": "Average",
+            "projectName": "11. Java Worl_9618ad81"
+        },
+        {
+            "type": "java",
+            "name": "Launch Even",
+            "request": "launch",
+            "mainClass": "Even",
+            "projectName": "11. Java Worl_9618ad81"
+        },
+        {
+            "type": "java",
+            "name": "Launch Fibonacci",
+            "request": "launch",
+            "mainClass": "Fibonacci",
+            "projectName": "11. Java Worl_9618ad81"
+        },
+        {
+            "type": "java",
+            "name": "Launch LCF",
+            "request": "launch",
+            "mainClass": "LCF",
+            "projectName": "11. Java Worl_9618ad81"
+        },
+        {
+            "type": "java",
+            "name": "Launch Prime",
+            "request": "launch",
+            "mainClass": "Prime",
+            "projectName": "11. Java Worl_9618ad81"
+        }
+    ]
+}

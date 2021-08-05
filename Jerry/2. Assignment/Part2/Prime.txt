@@ -1,0 +1,26 @@
+
+// pseudo code for task
+
+class Prime {
+    main(){
+        print("Wellcome this program output with is number is Prime or not");
+
+        print("Enter a integer : ");
+        input (num1);
+        print(num1 + " Is Prime Number : "+ isPrime(num1));
+    }
+    Function isPrime(n){
+        count =1;
+        num=2;
+        while(num <= n){
+            if(n % num == 0){
+                count++;
+            }
+            num++;
+        }
+        if(count > 2){
+            return false;
+        }
+        return true;
+    }
+}

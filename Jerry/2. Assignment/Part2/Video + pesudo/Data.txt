@@ -1,0 +1,24 @@
+
+main(String []args){ 
+        print("Enter your name : ");
+        input(name);
+        print("Enter your Age : ");
+        input(age);
+        print("Enter your College : ");
+        input(college);
+
+        printName(name);
+        printAge(age);
+        printcollege(college);
+    }
+    function printName(n){
+        print("My name is : " + n);
+    }
+    function printAge( n){
+        print("My Age is : " + n);
+    }
+    function printcollege(n){
+        print("My  College name is : " + n);
+    }
+    
+}

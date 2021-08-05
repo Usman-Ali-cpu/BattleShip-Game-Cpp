@@ -1,0 +1,17 @@
+class Factorial {
+  
+    main(){  
+        print("Enter a number to get Factorial : ");
+        input(number);
+        print("Factorial of "+number+" is: "+getFact(number));    
+    }  
+
+    function getFact( number){
+        i = 1,fact=1; 
+        for(i=1; i<=number){    
+            fact =  fact*i;    
+        } 
+        return fact;
+    }
+    
+}

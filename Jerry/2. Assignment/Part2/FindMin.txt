@@ -1,0 +1,18 @@
+class FindMin {
+    main(){
+        print("Minimum Number is : " + getMinimum());
+    }
+
+    function getMinimum(){
+        larger = 2434;
+        num =0;
+        while(num != -1){
+            print("Enter a number or (-1 to end): ");
+            input(num);
+            if(num < larger && num != -1){
+                larger = num;
+            }
+        }
+        return larger;
+    }
+}

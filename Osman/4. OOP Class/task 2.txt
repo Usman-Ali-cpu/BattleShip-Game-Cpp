@@ -1,0 +1,85 @@
+//2.	Linked lists                    
+
+//2.1)  Comment the syntax of the printed lines in row 24, 27, 30, 39, 42, 45 and 48
+//
+//2.2)  Define the class Employee with the required data members, which are needed for a linked list (matching the class ListOfEmployees).
+// 
+
+class Employee
+{
+private:                                                 //Private attributes
+    Employee* next;
+    string surname,firstname;
+
+public:                                                  //Public attributes
+
+
+    Employee()                                           //Constructor of the employee
+    {
+
+        cout<<"Please introduce your surname:"<<endl;         //The information input of each employee
+        cin>>surname;
+        cout<<"Please introduce your first name:"<<endl;
+        cin>>firstname;
+        cout<<endl;
+    }
+
+
+    string get_surname ()               // Getters and setters for the private attributes
+    {
+        return surname;
+    }
+    string get_firstname ()
+    {
+        return firstname;
+    }
+
+        Employee *get_next ()
+    {
+        return next;
+    }
+
+};
+
+class ListOfEmployees
+{
+    private:
+        Employee *Head;                     // Top of the list
+                                            //
+    public:
+        ListOfEmployees():Head(0) {}        // Constructor to initiated the top of the list
+                                            // initialized with null
+
+        void insert(Employee *t)            // Using the member function to insert the new employees
+        {                                   // inserting new employee t
+
+            string empname;
+            short year;
+            cout << "Name of employee: ";
+            cin >> empname;
+            cout << endl << "Year of birth: ";
+            cin >> year;
+            t->name = empname;              // the new employee gets into the list
+                                            //
+
+            t->birthYear = year;            // birthday year get the year declared
+                                            //
+
+            t->successor = Head;            // the next one arrives into the top of the list
+                                            //
+
+            Head = t;                       // it's calling the head that is initialised with 0
+                                            //
+        }
+};
+
+
+
+
+
+int main()
+{
+
+
+    return 0;
+}

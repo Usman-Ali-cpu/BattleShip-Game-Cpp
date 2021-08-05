@@ -1,0 +1,12 @@
+define a;
+define b;
+define c;
+define p;
+set a = false;
+set b = true;
+read c;
+read p;
+set d = not a;
+set e = c or p;
+print d;
+print e;

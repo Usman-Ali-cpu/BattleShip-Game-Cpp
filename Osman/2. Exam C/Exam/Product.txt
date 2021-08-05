@@ -1,0 +1,5 @@
+1 drink 2 25 Grocery
+2 bread 3 100 Bakery
+2 fruit 3 100 jcbe
+juice 4 5 284 bakrer
+wnen 34 66 394 dnec

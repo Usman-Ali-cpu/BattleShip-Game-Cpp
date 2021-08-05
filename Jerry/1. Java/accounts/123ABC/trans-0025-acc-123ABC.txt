@@ -1,0 +1,1 @@
+<rent><transId>0025-123ABC</transId><date>07/01/2021</date><description>holidayinn</description><status>true</status><transactionCost>2.99</transactionCost><numOfDays>2</numOfDays><rentDailyRate>50.00</rentDailyRate></rent>

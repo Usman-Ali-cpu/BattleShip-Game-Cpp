@@ -1,0 +1,4 @@
+<account><accId>123ABC</accId><owner><name> User7aman1</name><mailingAddress> MainSt1Apt1</mailingAddress><email> user1@gmail.com</email><phoneNum>111-111-1111</phoneNum></owner><status>true</status></account>
+<purchase><transId>0023-123ABC</transId><date>07/01/2021</date><description>handbag</description><status>true</status><transactionCost>2.99</transactionCost><numOfItems>2</numOfItems><pricePerItem>25.55</pricePerItem></purchase>
+<rent><transId>0025-123ABC</transId><date>07/01/2021</date><description>holidayinn</description><status>true</status><transactionCost>2.99</transactionCost><numOfDays>2</numOfDays><rentDailyRate>50.00</rentDailyRate></rent>
+<travel><transId>0026-123ABC</transId><date>07/01/2021</date><description>UstoIndia</description><status>true</status><transactionCost>2.99</transactionCost><travelCost>1100.00</travelCost></travel>

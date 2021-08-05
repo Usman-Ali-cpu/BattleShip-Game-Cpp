@@ -1,0 +1,4 @@
+which performs a Spell Check on the string s with respect to the set of words 
+If s is in W, then the call to spellCheck
+returns an iterable collection that contains only s
+since it is assumed to be spelled correctly in this case

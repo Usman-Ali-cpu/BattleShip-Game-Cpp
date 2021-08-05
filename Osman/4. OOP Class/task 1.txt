@@ -1,0 +1,78 @@
+//1.	Dynamic objects                
+
+//1.1)	Declare a class named CANDLE with the following data members
+//      Height (in cm) and colour. Choose appropiate data types.
+//      These data members can only be changed by derived classes.
+//      Define for the class:
+//      a) Standard constructor
+//      b) Parameterized constructor with member initialization list
+//      c) Member function data_output for the output of all data. The member function data_output should be defined outside of the class.
+//
+//1.2)  From experience, you know that a candle loses an average of 3 cm per hour of its Height.
+//
+//      Define a member function named updateHeight with the parameter burningHours and a suitable data type.
+//      The member function has the task to update the Height of the candle based on the hours.
+//      If the candle burned down after the update, the user should get an appropriate message,
+//      otherwise the program will print the current height of the candle.
+//
+//1.3)  Create 2 dynamic objects of the class CANDLE.
+//      Since the values of the data members do not have to be queried, they can be passed as static members.
+//      Call the member function data_output for the second instance and the member function updateHeight for the first instance.
+
+
+
+class CANDLE
+{
+private:
+    int height;
+    string colour;
+    static CANDLE *dynamicobj1, *dynamicobj2;
+
+public:
+    standardconstructor() {}
+
+
+    void updateheight();
+    void data_output();
+
+    int get_height()
+    {
+        return height;
+    }
+
+    string get_colour()
+    {
+        return colour;
+    }
+};
+
+void CANDLE::data_output()
+{
+    cout>>"what is the height of your candel in cm?"<<endl;
+    cin>>height;
+}
+
+void CANDLE::updateheight()
+{
+    int burninghours, burningheight=3, newheight, updateheight;
+    cout<<"what is the height of your candel in cm?"<<endl;
+    cin>>height;
+    cout<<"For how many hours is burning?"<<endl;
+    cin>>burninghours;
+
+    burninghours=burningheight*burninghours;
+    newheight=burninghours;
+    updateheight=height-newheight;
+
+    if(updateheight>0)
+        cout<<"This is the updated height of the candel: "<<updateheight<<endl;
+    else
+        cout<<"Candle burned down!";
+
+}
+int main()
+{
+
+
+    return 0;
+}

@@ -1,0 +1,1 @@
+<travel><transId>0026-123ABC</transId><date>07/01/2021</date><description>UstoIndia</description><status>true</status><transactionCost>2.99</transactionCost><travelCost>1100.00</travelCost></travel>

@@ -1,0 +1,418 @@
+public class SpellChecker {
+    private static String stringInput; // input to check;
+    private static String[] checkThis; // the stringInput turned array of words to check.
+    public static HashSet dictionary; // the dictionary used
+
+    /**
+     * Main method.
+     * @param args Argh!
+     */
+    public static void main(String[] args) {
+        setup();
+    }//end of main
+    /**
+     * This method loads the dictionary and initiates the checks for errors in a scanned input.
+     */
+    public static void setup(){
+        int tableSIZE=59000;
+        dictionary = new HashSet(tableSIZE);
+        try {
+            //System.out.print(System.getProperty("user.dir"));//just to find user's working directory;
+            // I combined FileReader into the BufferReader statement
+            //the file is located in edu.frostburg.cosc310
+            BufferedReader bufferedReader = new BufferedReader(new FileReader("./dictionary.txt"));
+            String line = null; // notes one line at a time
+            while((line = bufferedReader.readLine()) != null) {
+                dictionary.add(line);//add dictinary word in
+            }
+            prompt();
+            bufferedReader.close(); //close file        
+        }
+        catch(FileNotFoundException ex) {
+            ex.printStackTrace();//print error             
+        }
+        catch(IOException ex) {
+            ex.printStackTrace();//print error
+        }
+    }//end of setUp
+    /**
+     * Just a prompt for auto generated tests or manual input test.
+     */
+    public static void prompt(){
+        System.out.println("Type a number from below: ");
+        System.out.println("1. Auto Generate Test\t2.Manual Input\t3.Exit");
+        Scanner theLine = new Scanner(System.in);
+        int choice = theLine.nextInt(); // for manual input
+        if(choice==1) autoTest();
+        else if(choice==2) startwInput();
+        else if (choice==3) System.exit(0);
+        else System.out.println("Invalid Input. Exiting.");
+    }
+    /**
+     * Manual input of sentence or words.
+     */
+    public static void startwInput(){
+        //printDictionary(bufferedReader); // print dictionary
+        System.out.println("Spell Checker by C. Austria\nPlease enter text to check: ");
+        Scanner theLine = new Scanner(System.in);
+        stringInput = theLine.nextLine(); // for manual input
+        System.out.print("\nYou have entered this text: "+stringInput+"\nInitiating Check..."); 
+        /*------------------------------------------------------------------------------------------------------------*/
+        //final long startTime = System.currentTimeMillis(); //speed test
+        WordFinder grammarNazi = new WordFinder(); //instance of MisSpell
+        splitString(removePunctuation(stringInput));//turn String line to String[]
+        grammarNazi.initialCheck(checkThis);
+        //final long endTime = System.currentTimeMillis();
+        //System.out.println("Total execution time: " + (endTime - startTime) );
+    }//end of startwInput
+    /**
+     * Generates a testing case.
+     */
+    public static void autoTest(){
+        System.out.println("Spell Checker by C. Austria\nThis sentence is being tested:\nThe dog foud my hom. And m ct hisse xdgfchv!@# ");
+        WordFinder grammarNazi = new WordFinder(); //instance of MisSpell
+        splitString(removePunctuation("The dog foud my hom. And m ct hisse xdgfchv!@# "));//turn String line to String[]
+        grammarNazi.initialCheck(checkThis);
+    }//end of autoTest
+
+    /**
+     * This method prints the entire dictionary. 
+     * Was used in testing.
+     * @param bufferedReader the dictionary file
+     */
+    public static void printDictionary(BufferedReader bufferedReader){
+        String line = null; // notes one line at a time
+        try{
+            while((line = bufferedReader.readLine()) != null) {
+                System.out.println(line);
+            }
+        }catch(FileNotFoundException ex) {
+            ex.printStackTrace();//print error             
+        }
+        catch(IOException ex) {
+            ex.printStackTrace();//print error
+        }
+    }//end of printDictionary
+
+    /**
+     * This methods splits the passed String and puts them into a String[]
+     * @param sentence The sentence that needs editing.
+     */
+    public static void splitString(String sentence){
+        // split the sentence in between " " aka spaces
+        checkThis = sentence.split(" ");
+    }//end of splitString
+
+    /**
+     * This method removes the punctuation and capitalization from a string.
+     * @param sentence The sentence that needs editing.
+     * @return the edited sentence.
+     */
+    public static String removePunctuation(String sentence){
+        String newSentence; // the new sentence
+        //remove evil punctuation and convert the whole line to lowercase
+        newSentence = sentence.toLowerCase().replaceAll("[^a-zA-Z\\s]", "").replaceAll("\\s+", " ");
+        return newSentence;
+    }//end of removePunctuation
+}
+
+This class checks for misspellings
+
+public class WordFinder extends SpellChecker{
+    private int wordsLength;//length of String[] to check
+    private List<String> wrongWords = new ArrayList<String>();//stores incorrect words
+
+    /**
+     * This methods checks the String[] for spelling errors. 
+     * Hashes each index in the String[] to see if it is in the dictionary HashSet
+     * @param words String list of misspelled words to check
+     */
+    public void initialCheck(String[] words){
+        wordsLength=words.length;
+
+        System.out.println();
+        for(int i=0;i<wordsLength;i++){
+            //System.out.println("What I'm checking: "+words[i]); //test only
+            if(!dictionary.contains(words[i])) wrongWords.add(words[i]);
+        } //end for
+        //manualWordLookup(); //for testing dictionary only
+        if (!wrongWords.isEmpty()) {
+            System.out.println("Mistakes have been made!");
+            printIncorrect();
+        } //end if
+        if (wrongWords.isEmpty()) {
+            System.out.println("\n\nMove along. End of Program.");
+        } //end if
+    }//end of initialCheck
+
+    /**
+     * This method that prints the incorrect words in a String[] being checked and generates suggestions.
+     */
+    public void printIncorrect(){//delete this guy
+        System.out.print("These words [ ");
+        for (String wrongWord : wrongWords) {
+            System.out.print(wrongWord + " ");
+        }//end of for
+        System.out.println("]seems incorrect.\n");
+        suggest();
+    }//end of printIncorrect
+
+    /**
+     * This method gives suggestions to the user based on the wrong words she/he misspelled.
+     */
+    public void suggest(){
+        MisSpell test = new MisSpell();
+        while(!wrongWords.isEmpty()&&test.possibilities.size()<=5){
+            String wordCheck=wrongWords.remove(0);
+            test.generateMispellings(wordCheck);
+            //if the possibilities size is greater than 0 then print suggestions
+            if(test.possibilities.size()>=0) test.print(test.possibilities);
+        }//end of while
+    }//end of suggest
+
+    /*ENTERING TEST ZONE*/
+    /**
+     * This allows a tester to look thorough the dictionary for words if they are valid; and for testing only.
+     */
+    public void manualWordLookup(){
+        System.out.print("Enter 'ext' to exit.\n\n");
+        Scanner line = new Scanner(System.in);
+        String look=line.nextLine();
+        do{
+        if(dictionary.contains(look)) System.out.print(look+" is valid\n");
+        else System.out.print(look+" is invalid\n");
+        look=line.nextLine();
+        }while (!look.equals("ext"));
+    }//end of manualWordLookup
+}
+/**
+ * This is the main class responsible for generating misspellings.
+ * @author Catherine Austria
+ */
+public class MisSpell extends SpellChecker{
+    public List<String> possibilities = new ArrayList<String>();//stores possible suggestions
+    private List<String> tempHolder = new ArrayList<String>(); //telps for the transposition method
+    private int Ldistance=0; // the distance related to the two words
+    private String wrongWord;// the original wrong word.
+
+    /**
+     * Execute methods that make misspellings.
+     * @param wordCheck the word being checked.
+     */
+    public void generateMispellings(String wordCheck){
+        wrongWord=wordCheck;
+        try{
+            concatFL(wordCheck);
+            concatLL(wordCheck);
+            replaceFL(wordCheck);
+            replaceLL(wordCheck);
+            deleteFL(wordCheck);
+            deleteLL(wordCheck);
+            pluralize(wordCheck);
+            transposition(wordCheck);
+        }catch(StringIndexOutOfBoundsException e){ 
+            System.out.println();
+        }catch(ArrayIndexOutOfBoundsException e){
+            System.out.println();
+        }
+
+
+    }
+
+    /**
+     * This method concats the word behind each of the alphabet letters and checks if it is in the dictionary. 
+     * FL for first letter
+     * @param word the word being manipulated.
+     */
+    public void concatFL(String word){
+        char cur; // current character
+        String tempWord=""; // stores temp made up word
+        for(int i=97;i<123;i++){
+            cur=(char)i;//assign ASCII from index i value
+            tempWord+=cur;
+            //if the word is in the dictionary then add it to the possibilities list
+            tempWord=tempWord.concat(word); //add passed String to end of tempWord
+            checkDict(tempWord); //check to see if in dictionary
+            tempWord="";//reset temp word to contain nothing
+        }//end of for
+    }//end of concatFL
+
+    /**
+     * This concatenates the alphabet letters behind each of the word and checks if it is in the dictionary. LL for last letter.
+     * @param word the word being manipulated.
+     */
+    public void concatLL(String word){
+        char cur; // current character
+        String tempWord=""; // stores temp made up word
+        for(int i=123;i>97;i--){
+            cur=(char)i;//assign ASCII from index i value
+            tempWord=tempWord.concat(word); //add passed String to end of tempWord
+            tempWord+=cur;
+            //if the word is in the dictionary then add it to the possibilities list
+            checkDict(tempWord);
+            tempWord="";//reset temp word to contain nothing
+        }//end of for
+    }//end of concatLL
+
+    /**
+     * This method replaces the first letter (FL) of a word with alphabet letters.
+     * @param word the word being manipulated.
+     */
+    public void replaceFL(String word){
+        char cur; // current character
+        String tempWord=""; // stores temp made up word
+        for(int i=97;i<123;i++){
+            cur=(char)i;//assign ASCII from index i value
+            tempWord=cur+word.substring(1,word.length()); //add the ascii of i ad the substring of the word from index 1 till the word's last index
+            checkDict(tempWord);
+            tempWord="";//reset temp word to contain nothing
+        }//end of for
+    }//end of replaceFL
+
+    /**
+     * This method replaces the last letter (LL) of a word with alphabet letters
+     * @param word the word being manipulated.
+     */
+    public void replaceLL(String word){
+        char cur; // current character
+        String tempWord=""; // stores temp made up word
+        for(int i=97;i<123;i++){
+            cur=(char)i;//assign ASCII from index i value
+            tempWord=word.substring(0,word.length()-1)+cur; //add the ascii of i ad the substring of the word from index 1 till the word's last index
+            checkDict(tempWord);
+            tempWord="";//reset temp word to contain nothing
+        }//end of for
+    }//end of replaceLL
+
+    /**
+     * This deletes first letter and sees if it is in dictionary
+     * @param word the word being manipulated.
+     */
+    public void deleteFL(String word){
+        String tempWord=word.substring(1,word.length()-1); // stores temp made up word
+        checkDict(tempWord);
+        //print(possibilities);
+    }//end of deleteFL
+
+    /**
+     * This deletes last letter and sees if it is in dictionary
+     * @param word the word being manipulated.
+     */
+    public void deleteLL(String word){
+        String tempWord=word.substring(0,word.length()-1); // stores temp made up word
+        checkDict(tempWord);
+        //print(possibilities);
+    }//end of deleteLL
+
+    /**
+     * This method pluralizes a word input
+     * @param word the word being manipulated.
+     */
+    public void pluralize(String word){
+        String tempWord=word+"s";
+        checkDict(tempWord);
+    }//end of pluralize
+
+    /**
+     * It's purpose is to check a word if it is in the dictionary. 
+     * If it is, then add it to the possibilities list.
+     * @param word the word being checked.
+     */
+    public void checkDict(String word){
+        if(dictionary.contains(word)){//check to see if tempWord is in dictionary
+            //if the tempWord IS in the dictionary, then check if it is in the possibilities list 
+            //then if tempWord IS NOT in the list, then add tempWord to list
+            if(!possibilities.contains(word)) possibilities.add(word);
+        }
+    }//end of checkDict
+
+    /**
+     * This method transposes letters of a word into different places.
+     * Not the best implementation. This guy was my last minute addition.
+     * @param word the word being manipulated.
+     */
+    public void transposition(String word){
+        wrongWord=word;
+        int wordLen=word.length();
+        String[] mixer = new String[wordLen]; //String[] length of the passed word
+        //make word into String[]
+        for(int i=0;i<wordLen;i++){
+            mixer [i]=word.substring(i,i+1);
+        }
+        shift(mixer);
+    }//end of transposition
+
+    /**
+     * This method takes a string[] list then shifts the value in between 
+     * the elements in the list and checks if in dictionary, adds if so. 
+     * I agree that this is probably the brute force implementation.
+     * @param mixer the String array being shifted around.
+     */
+    public void shift(String[] mixer){
+        System.out.println();
+        String wordValue="";
+        for(int i=0;i<=tempHolder.size();i++){
+            resetHelper(tempHolder);//reset the helper
+            transposeHelper(mixer);//fill tempHolder
+            String wordFirstValue=tempHolder.remove(i);//remove value at index in tempHolder
+            for(int j=0;j<tempHolder.size();j++){
+                int inttemp=0;
+                String temp;
+                while(inttemp<j){
+                    temp=tempHolder.remove(inttemp);
+                    tempHolder.add(temp);
+                    wordValue+=wordFirstValue+printWord(tempHolder);
+                    inttemp++;
+                    if(dictionary.contains(wordValue)) if(!possibilities.contains(wordValue)) possibilities.add(wordValue);
+                    wordValue="";
+                }//end of while
+            }//end of for
+        }//end for
+    }//end of shift
+
+    /**
+     * This method fills a list tempHolder with contents from String[]
+     * @param wordMix the String array being shifted around.
+     */
+    public void transposeHelper(String[] wordMix){
+        for(int i=0;i<wordMix.length;i++){
+            tempHolder.add(wordMix[i]);
+        }
+    }//end of transposeHelper
+
+    /**
+     * This resets a list
+     * @param thisList removes the content of a list
+     */
+    public void resetHelper(List<String> thisList){
+        while(!thisList.isEmpty()) thisList.remove(0); //while list is not empty, remove first value
+    }//end of resetHelper
+
+    /**
+     * This method prints out a list
+     * @param listPrint the list to print out.
+     */
+    public void print(List<String> listPrint){
+        if (possibilities.isEmpty()) {
+            System.out.print("Can't seem to find any related words for "+wrongWord);
+            return;
+        }
+        System.out.println("Maybe you meant these for "+wrongWord+": ");
+        System.out.printf("%s", listPrint);
+        resetHelper(possibilities);
+    }//end of print
+
+    /**
+     * This returns a String word version of a list
+     * @param listPrint the list to make into a word.
+     * @return the generated word version of a list.
+     */
+    public String printWord(List<String> listPrint){
+        Object[] suggests = listPrint.toArray();
+        String theWord="";
+        for(Object word: suggests){//form listPrint elements into a word
+            theWord+=word;
+        }
+        return theWord;
+    }//end of printWord
+}

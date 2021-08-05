@@ -1,0 +1,13 @@
+Analysis of Sprocket Tests
+ measured on July 27 21
+
+10 Sprockets are analysed
+The Batch is a No Go
+
+80% of sprockets are Go
+20% of sprockets are No Go
+
+Mean Hole Diameter: 0.255 inches.
+Range of Outer Diameters: 0.015 inches.
+	Maximum Outer Diameter: 1.090 inches.
+	Minimum Outer Diameter: 1.075 inches.

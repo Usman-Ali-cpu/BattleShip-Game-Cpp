@@ -1,0 +1,1 @@
+<purchase><transId>0023-456ABC</transId><date>07/01/2021</date><description>handbag</description><status>true</status><transactionCost>2.44</transactionCost><numOfItems>2</numOfItems><pricePerItem>25.55</pricePerItem></purchase>

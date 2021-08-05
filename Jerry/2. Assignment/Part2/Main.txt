@@ -1,0 +1,19 @@
+class Main {
+    main(){ 
+        print("Enter a number: ");
+        input(number);
+        print("Enter a it power: ");
+        input(pow);
+
+        print("Sum of " + number + " and " + pow + " is : " + sum(number, pow));
+        print("Power of " + number + " to " + pow + " is : " + getPower(number, pow));
+
+    }
+
+    function getPower(num, p){
+        return Math.pow(num, p);
+    }
+    function sum(num, p){
+        return num + p;
+    } 
+}

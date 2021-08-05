@@ -1,0 +1,65 @@
+//3.	Abstract classes and polymorphism                    
+
+//3.1)  Extend the below given class PROPERTY by adding the correct data members given in the constructor.
+//      Only derived classes should be able to can change these data members. The program should then run error-free.
+//
+//3.2)  Modify the class PROPERTY so that it will be an abstract class [by using the member function print()].
+//
+//3.3)	What’s special about abstract base classes?
+//      Answer:We cannot create objects of abstract classes.
+//
+//
+//
+//
+//3.4)  Extend the program by adding a derived class HOUSE of the abstract class PROPERTY.
+//      This class should have the data member floors, which is of the data type int,
+//      and furnished, which is of the data type bool, implemented.
+//      It’s also supposed to have a default constructor and a constructor member initializer list.
+//      Which member function(s) have to be implemented to run the program? Implement this member function(s).
+
+class PROPERTY :public print
+{
+
+private:
+
+float area;
+string town, street;
+PROPERTY count;
+
+    public:
+        PROPERTY () { count++; }
+        PROPERTY (float a, string t, string s): area(a), town(t), street(s) { count++; }
+
+        void print() { }; //Output of the data
+};
+
+int PROPERTY::count = 0;
+
+
+
+class House:public PROPERTY
+{
+private:
+    int flours;
+    bool furnished;
+
+public:
+    House():flours{1},furnished{true}
+    {
+
+    }
+
+
+
+};
+
+
+
+
+
+int main()
+{
+print();
+
+    return 0;
+}
