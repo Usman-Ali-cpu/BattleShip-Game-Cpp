@@ -5,21 +5,7 @@ public class StudentClass {
 
     }
 
-    public static void main(String[] args) {
-
-        // ScoreList<Integer> s = new ScoreList<>();
-
-        // System.out.println(getQuery("Raja Ravi Vinay Rahul Arun", "1,r"));
-        System.out.println(getQuery("Ram Vijay Vinay Rahul Arun", "2,B- AB- B- O+ B-,B-"));
-        System.out.println(getQuery("Ram Vijay Vinay Rahul Arun", "2,B- AB- AB- O+ B-,AB-"));
-
-        // System.out.println(getQuery("96 78 93 45 90 42 69", "3,90"));
-        // System.out.println(getQuery("96 78 93 45 90 42 69", "4"));
-        // System.out.println(getQuery("5.6 6.7 8.9 5.8", "5"));
-
-    }
-
-    public static String getQuery(String studentData, String query) {
+    public String getQuery(String studentData, String query) {
 
         String[] names = studentData.split(" ");
         arrName = names;

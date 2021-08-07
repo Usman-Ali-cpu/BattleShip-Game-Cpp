@@ -8,7 +8,7 @@ public class Even {
         int n = input.nextInt();
         for (int i = 0; i < n; i++) {
             if (i % 2 == 0) {
-                System.out.println(i + " is a Even number in range of " + n);
+                System.out.println(i);
             }
         }
     }
