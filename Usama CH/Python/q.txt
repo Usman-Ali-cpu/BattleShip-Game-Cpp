@@ -1,0 +1,9 @@
+· Initialise an empty 2D list to accept each student’s name, 
+the mark and grade they obtained on a series of weekly tests. 
+Ask the user to input as many names as they like, 
+until they enter “End” instead of a name.
+
+Slice the list in half and print the first half of the list. 
+If the list contains an odd number of values, 
+e.g., nine values, 
+print only the first four values.

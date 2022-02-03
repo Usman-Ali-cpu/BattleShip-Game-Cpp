@@ -1,0 +1,26 @@
+print (date and time)
+open file "confPack.txt" to read 
+define packlist
+for line in packfile
+packlist.add(line)
+
+basic = packlist[0]
+bonus = packlist[1]
+
+
+open file "employee.txt" to read 
+for each line in employee.txt file
+get each line of employee to list name elements for each word separated by comma
+length = length of elements list
+
+loop through employee list
+      read element in list and store in namelist
+	If namelist length equal 3 and last element equals Y
+	Print name and basic confpack  information
+Else if nameless length  equal 4 and 3rd element Y and 4th element equal Y
+	Print name and basic plus bonus pack
+	Else if namelist length equal 4 and third element is blank  and 4th element  equal Y
+	Print name and Basic Pack
+Else If nameless length equal 2
+	Print name not attending
+

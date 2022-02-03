@@ -1,0 +1,18 @@
+Write a program using a suitable data structure 
+using Linked implementation to evaluate 
+Boolean expressions such as the one shown next:
+(T | T) & F & (F | T)
+(T|T)&F&(F|T)
+where T is for true and F is for false. 
+The expressions may include the following operators: 
+“!” for not, “&” for and, and “|” for or; 
+the use of parentheses for operations grouping is also 
+allowed. To perform the evaluation of an expression, 
+you will consider the priority of the operators, 
+the not having the highest and the or the lowest. 
+The program must yield T or F as the result for 
+each expression in the input file.
+Input:
+A variable length expression.
+Output:
+The result of the expression evaluation, for example: (T | T) & F & (F | T) will produce F.

@@ -1,0 +1,4 @@
+interface ICanValidate {
+
+    boolean isValid();
+}

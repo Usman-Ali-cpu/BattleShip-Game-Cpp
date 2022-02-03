@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch AverageArray",
+            "request": "launch",
+            "mainClass": "AverageArray",
+            "projectName": "11. Java Worl_9618ad81"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"

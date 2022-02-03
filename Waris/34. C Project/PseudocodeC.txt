@@ -1,0 +1,115 @@
+
+ROWS = 31
+COLUMNS = 4
+SUMMARY_ROWS = 4
+
+
+FUNCTION MAIN()
+	%% Variables
+    filename
+    headers[COLUMNS]
+    dataTable[ROWS][COLUMNS]
+    summaryInformation[SUMMARY_ROWS][COLUMNS]
+
+    filename = GETFILENAME()
+	READFILE(filename, headers, dataTable)
+	SUMMARY(dataTable, summaryInformation)
+	PRINTSUMMARY(filename, headers, summaryInformation)
+END FUNCTION
+
+
+FUNCTION filename = GETFILENAME()
+    filename = INPUT "Type the filename to process >"
+    WHILE the file doesn't exist
+        PRINT "error: file not found"
+		filename = INPUT "Type the filename to process >"
+    END WHILE
+END FUNCTION
+
+
+FUNCTION READFILE(filename, headers, dataTable)
+    file = OPEN filename
+    IF the file opened THEN
+		READLINE file INTO headers
+		READLINES file INTO dataTable
+		CLOSE file
+    END IF
+END FUNCTION
+
+
+%% Get the maximum of a specific column.
+FUNCTION maximum = MAXIMUM(dataTable, column)
+	maximum = dataTable.Columns(column).FirstElement
+	FOREACH value in dataTable.Columns(column)
+		IF value > maximum THEN
+			maximum = value
+		END IF
+	END FOREACH
+END FUNCTION
+
+
+%% Count the number of values in a specific column 
+%% that are above a boundary.
+FUNCTION count = COUNT(dataTable, column, boundary)
+    count = 0
+	FOREACH value in dataTable.Columns(column)
+		IF value > boundary THEN
+			count = count + 1
+		END IF
+	END FOREACH
+END FUNCTION
+
+
+%% Sum values in a specific column that are above are boundary.
+FUNCTION sum = SUM(dataTable, column, boundary)
+	sum = 0
+	FOREACH value in dataTable.Columns(column)
+		IF value > boundary THEN
+			sum = sum + value
+		END IF
+	END FOREACH
+END FUNCTION
+
+
+FUNCTION SUMMARY(dataTable, summary)	
+	FOR column = 1 to COLUMNS
+		aColumn = summary.Columns(column)
+
+        aColumn(1) = MAXIMUM(dataTable, column)
+        aColumn(2) = N = COUNT(dataTable, column, 0)
+		IF N > 0 THEN
+            aColumn(3) = A = SUM(dataTable, column, 0) / N
+            aColumn(4) = COUNT(dataTable, column, A)
+		ELSE
+            aColumn(3) = NA
+            aColumn(4) = NA
+        END IF
+	END FOR
+END FUNCTION
+
+
+FUNCTION PRINTSUMMARY(filename, headers, summary)
+	PRINT "Summary Information for " + '"' + filename + '"'
+	PRINT "DUID = "
+	PRINTROW(headers)
+	
+	PRINT "Maximum Daily Average = "
+	PRINTROW(summary.Rows(1))
+	
+	PRINT "Daily Averages Above 0 = "
+	PRINTROW(summary.Rows(2))
+	
+	PRINT "Average of Daily Averages > 0 = "
+	PRINTROW(summary.Rows(3))
+	
+	PRINT "Daily Averages > Average = "
+	PRINTROW(summary.Rows(4))
+END FUNCTION
+
+
+FUNCTION PRINTROW(dataRow)
+	FOREACH value in dataRow
+		PRINT value
+	END FOREACH
+	PRINT NEWLINE
+END FUNCTION

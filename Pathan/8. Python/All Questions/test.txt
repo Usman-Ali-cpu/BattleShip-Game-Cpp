@@ -1,0 +1,23 @@
+**After the table has been populated a function named update_table should be called that creates 
+and runs SQL statements to do the following:
+
+Julie King (id 4444) has retired, delete her from the table and display a message that 
+the delete was successful.
+James Krieger (id 6666) has been transferred to the Server component, 
+update his component to reflect the transfer and display a message that the update has been successful.
+
+
+Dana Duffield (id 1111) has reached his anniversary date,
+ update his years_of_service to 26 and display a message that the update was successful.
+
+
+
+ 
+After the updates have been completed, 
+a function named query_table should be called that creates and runs the following queries:
+
+Create a query to display the first_name, last_name, component and 
+years_of_service with years_of_service &gt;= 10, order the query results by years_of_service in descending order.
+
+Create a query to display the first_name and last_name of all developers who work on the JDBC component.
+Create a query to display all information about all developers in alphabetical order by last_name. **

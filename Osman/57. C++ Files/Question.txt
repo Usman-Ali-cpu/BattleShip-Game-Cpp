@@ -1,0 +1,52 @@
+A C++ computer program realising an information system for 
+GSM sales(brand, model, color, price, internal memory size, display diagonal, 
+if it works with two SIMcards, number of phones from this model). 
+The program have to store and process data about the available phones. 
+the maximum number of phones the program can support should be 100.
+
+Basic requirement:
+
+A:A menu that can choose the functions in the program.
+
+B:Adding new phones.
+
+1:adding one new mobile phone.
+
+2:Adding a list of phones.
+
+C:Showing all mobile phones to the screen.
+
+1:Showing the phones with least internal memory.
+
+2:Showing the phones with two SIM cards.
+
+D:Adjustment of the data for a phone.
+
+1:Entering the brand and model and data for adjustment(correction).
+
+2::If there are no phones an apropriate message is shown.
+
+E:Sale of mobile phones.
+
+1:Entering the brand and model of the phone and after the sale the number of phones decreases.
+
+2:If there are no phones a message is shown.
+
+F:Review of the phones in stock.
+
+1:By brand.
+
+2:by Criteria(brand, model, from newest to oldest, display size).
+
+G:Data in the program can be saved in a file between two program launches.
+
+
+
+Samsung,A53,Black,4000,64,6.1,T,20
+Apple,11pro,White,6000,64,5.2,F,10
+Vivo,V20,Blue,2000.000000,128,6.200000,T,15
+Huawei,P20,white,1500.000000,64,5.300000,T,30
+Dell,E72,Black,3000.000000,16,4.000000,T,10
+Vivo,e56,while,4000.000000,8,5.400000,F,40
+Apple,10X,gray,2000.000000,64,5.300000,T,30
+Huawei,ZX20,gray,4000.000000,32,4.900000,F,50

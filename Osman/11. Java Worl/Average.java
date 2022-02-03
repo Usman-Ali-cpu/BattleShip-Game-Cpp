@@ -14,6 +14,7 @@ public class Average {
         }
         float avr = sum / n;
         System.out.println("Average of " + n + " numbers is : " + avr);
+        input.close();
 
     }
 

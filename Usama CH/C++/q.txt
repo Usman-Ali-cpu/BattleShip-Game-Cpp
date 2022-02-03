@@ -1,0 +1,4 @@
+Example #1. A={1,2,3,4,5}. Output: “Sums are 9 and 12, and the two are part of the three.”.
+Example #2. A={1,7,7,7,1,9,9}. Output: “Sums are 18 and 21, and the two are not fully part of the three.”.
+Example #3. A={1,9,4,8,8}. Output: “Sums are 16 and 21, and the two are not fully part of the three”.
+Example #4. A={1,7}. Output: “Size of the array too small.”

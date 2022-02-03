@@ -1,0 +1,33 @@
+NAME = rush-2
+SRC = *.c rush00_validators/*.c lib/*.c
+CFLAGS = -Wall -Wextra -Werror # -g -fsanitize=undefined,address
+
+all: rush-2 00 01 02 03 04
+
+rush-2:
+	gcc $(CFLAGS) -c $(SRC)
+	gcc $(CFLAGS) -o $(NAME) *.o
+
+00:
+	gcc -Wall -Wextra -Werror rush00_files/main.c rush00_files/ft_putchar.c rush00_files/rush$@.c -o rush-$@
+
+01:
+	gcc -Wall -Wextra -Werror rush00_files/main.c rush00_files/ft_putchar.c rush00_files/rush$@.c -o rush-$@
+
+02:
+	gcc -Wall -Wextra -Werror rush00_files/main.c rush00_files/ft_putchar.c rush00_files/rush$@.c -o rush-$@
+
+03:
+	gcc -Wall -Wextra -Werror rush00_files/main.c rush00_files/ft_putchar.c rush00_files/rush$@.c -o rush-$@
+
+04:
+	gcc -Wall -Wextra -Werror rush00_files/main.c rush00_files/ft_putchar.c rush00_files/rush$@.c -o rush-$@
+
+clean:
+	rm -f *.o
+
+fclean: clean
+	rm -f $(NAME)
+	rm -f rush-0*
+
+re: fclean all

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5774eb70-fe7d-49ca-b936-3d2d4ce2f373" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Osman/11. Java Worl/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Osman/11. Java Worl/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Osman/11. Java Worl/Average.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Osman/11. Java Worl/Average.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Osman/11. Java Worl/LCF.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Osman/11. Java Worl/LCF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Osman/14. Java/File/EncryptDecryptFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Osman/14. Java/File/EncryptDecryptFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Osman/14. Java/File/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Osman/14. Java/File/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Osman/14. Java/Validator/Encryptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Osman/14. Java/Validator/InvalidMessageException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Osman/14. Java/Validator/InvalidMessageException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Osman/14. Java/Validator/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Osman/14. Java/Validator/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Osman/15. Hash/AcousticGuitar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Osman/15. Hash/ClassicAcoustic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Osman/15. Hash/ElectricGuitar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Osman/15. Hash/FlamencoAcoustic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Osman/15. Hash/Guitar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Osman/15. Hash/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Osman/15. Hash/SingleCutElectric.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Osman/15. Hash/StratocasterElectric.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Osman/15. Hash/file.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Waris/LinkList/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Waris/LinkList/Imain.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Waris/LinkList/Imain.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Waris/LinkList/IntList.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Waris/LinkList/IntList.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Waris/LinkList/dmain.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Waris/LinkList/m.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Waris/LinkList/m.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Waris/LinkList/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Waris/LinkList/main.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Waris/cppProject (2)/cppProject (1)/.vscode/c_cpp_properties.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Waris/cppProject (2)/cppProject (1)/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Waris/cppProject (2)/cppProject (1)/people.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Waris/cppProject (2)/cppProject (1)/people.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Waris/cppProject (2)/cppProject (1)/times.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Waris/cppProject (2)/cppProject (1)/visitors.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Waris/cppProject (2)/cppProject (1)/visits.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="21HkztbyGBi9xCB45pgJSHuFbTV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5774eb70-fe7d-49ca-b936-3d2d4ce2f373" name="Default Changelist" comment="" />
+      <created>1637605677363</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637605677363</updated>
+    </task>
+    <servers />
+  </component>
+</project>

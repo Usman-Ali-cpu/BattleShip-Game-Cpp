@@ -1,0 +1,16 @@
+D:\Fiverr\Osman\32. C#\obj\Debug\net5.0\32. C#.csproj.AssemblyReference.cache
+D:\Fiverr\Osman\32. C#\obj\Debug\net5.0\32. C#.GeneratedMSBuildEditorConfig.editorconfig
+D:\Fiverr\Osman\32. C#\obj\Debug\net5.0\32. C#.AssemblyInfoInputs.cache
+D:\Fiverr\Osman\32. C#\obj\Debug\net5.0\32. C#.AssemblyInfo.cs
+D:\Fiverr\Osman\32. C#\obj\Debug\net5.0\32. C#.csproj.CoreCompileInputs.cache
+D:\Fiverr\Osman\32. C#\bin\Debug\net5.0\32. C#.exe
+D:\Fiverr\Osman\32. C#\bin\Debug\net5.0\32. C#.deps.json
+D:\Fiverr\Osman\32. C#\bin\Debug\net5.0\32. C#.runtimeconfig.json
+D:\Fiverr\Osman\32. C#\bin\Debug\net5.0\32. C#.runtimeconfig.dev.json
+D:\Fiverr\Osman\32. C#\bin\Debug\net5.0\32. C#.dll
+D:\Fiverr\Osman\32. C#\bin\Debug\net5.0\ref\32. C#.dll
+D:\Fiverr\Osman\32. C#\bin\Debug\net5.0\32. C#.pdb
+D:\Fiverr\Osman\32. C#\obj\Debug\net5.0\32. C#.dll
+D:\Fiverr\Osman\32. C#\obj\Debug\net5.0\ref\32. C#.dll
+D:\Fiverr\Osman\32. C#\obj\Debug\net5.0\32. C#.pdb
+D:\Fiverr\Osman\32. C#\obj\Debug\net5.0\32. C#.genruntimeconfig.cache

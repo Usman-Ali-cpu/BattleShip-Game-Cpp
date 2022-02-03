@@ -1,0 +1,40 @@
+VirtualPetShelterApp class
+Create a main method that…
+implements a game loop.
+asks for user input.
+writes output to the console.
+calls VirtualPetShelter’s tick method after each interaction
+Available user interface actions should include (at minimum)…
+feeding all the pets
+watering all the pets
+playing with an individual pet, which should display a list of pet names and descriptions, 
+allowing a user to select one
+allow adoption of a pet, which should display a list of pet names and descriptions, 
+allowing a user to select one. NOTE: In the past this has been a bit confusing. 
+Keep in mind you are playing the role of a shelter worker, 
+if a pet is adopted it will be removed from the shelter.
+allow intake of a pet, prompting the user for the pet’s information, 
+requiring the user to (at minimum) specify name and description
+(Hint: you can use tab characters (“\t”) to align console output in columns.)
+
+VirtualPetShelter class
+include appropriate instance variable(s) to store the pets who reside at the shelter
+include methods that:
+return a Collection of all of the pets in the shelter
+return a specific VirtualPet given its name
+allow intake of a homeless pet (adding a pet to the shelter)
+allow adoption of a homeless pet (removing a pet from the shelter)
+feed all of the pets in the shelter
+water all of the pets in the shelter
+plays (or performs some other interaction(s)) with an individual pet in the shelter
+include a tick method that calls the tick method for each of the pets in the shelter, updating their needs
+VirtualPet class
+In addition to the requirements from last week’s project:
+
+include instance variables representing:
+name (from the above example, this might be “Tommy”)
+description (from the above example, this might be “smells like a Stargazer lily fresh with morning dew”)
+include a constructor that accepts a name and description
+include a constructor that, in addition to name and description, 
+accepts default values for the pet’s attributes (hunger, boredom, etc)
+Do not include a default (zero arguments) constructor

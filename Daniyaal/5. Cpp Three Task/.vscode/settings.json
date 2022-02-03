@@ -1,0 +1,22 @@
+{
+    "files.associations": {
+        "xstring": "cpp",
+        "memory": "cpp",
+        "system_error": "cpp",
+        "typeinfo": "cpp",
+        "utility": "cpp",
+        "xtr1common": "cpp",
+        "xutility": "cpp",
+        "atomic": "cpp",
+        "exception": "cpp",
+        "istream": "cpp",
+        "iterator": "cpp",
+        "ostream": "cpp",
+        "streambuf": "cpp",
+        "tuple": "cpp",
+        "xlocale": "cpp",
+        "xlocinfo": "cpp",
+        "xmemory": "cpp",
+        "iostream": "cpp"
+    }
+}

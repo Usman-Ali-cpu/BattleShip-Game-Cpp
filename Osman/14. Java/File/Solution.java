@@ -1,9 +1,5 @@
-import java.io.*;
-import java.util.Random;
-import java.util.Scanner;
 
 // Write your code below.
-//
 
 public class Solution {
     public static String filepath = System.getenv("OUTPUT_PATH").substring(0,
@@ -21,8 +17,7 @@ public class Solution {
     }
 
     public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
-        String message = sc.nextLine();
+        String message = "";
 
         try {
             EncryptDecryptFile f = new EncryptDecryptFile();

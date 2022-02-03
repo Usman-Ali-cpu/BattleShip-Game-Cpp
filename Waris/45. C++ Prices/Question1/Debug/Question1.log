@@ -1,0 +1,9 @@
+﻿  Source.cpp
+C:\Users\osman\source\repos\Question1\Source.cpp(51,32): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\osman\source\repos\Question1\Source.cpp(52,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\osman\source\repos\Question1\Source.cpp(56,24): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\osman\source\repos\Question1\Source.cpp(59,22): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\osman\source\repos\Question1\Source.cpp(62,22): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\osman\source\repos\Question1\Source.cpp(65,22): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\osman\source\repos\Question1\Source.cpp(68,22): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Question1.vcxproj -> C:\Users\osman\source\repos\Question1\Debug\Question1.exe

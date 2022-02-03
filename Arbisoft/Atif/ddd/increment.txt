@@ -1,0 +1,107 @@
+Overloading the increment operator
+The operator symbol for both prefix(++i) and postfix(i++) are the same. Hence, we need two different function definitions to distinguish between them. This is achieved by passing a dummy int parameter in the postfix version.
+Here is the code to demonstrate the same.
+Pre-increment overloading 
+
+// C++ program to demonstrate
+// prefix increment operator overloading
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Integer {
+private:
+	int i;
+
+public:
+	// Parameterised constructor
+	Integer(int i = 0)
+	{
+		this->i = i;
+	}
+
+	// Overloading the prefix operator
+	Integer operator++()
+	{
+		Integer temp;
+		temp.i = ++i;
+		return temp;
+	}
+
+	// Function to display the value of i
+	void display()
+	{
+		cout << "i = " << i << endl;
+	}
+};
+
+// Driver function
+int main()
+{
+	Integer i1(3);
+
+	cout << "Before increment: ";
+	i1.display();
+
+	// Using the pre-increment operator
+	Integer i2 = ++i1;
+
+	cout << "After pre increment: ";
+	i2.display();
+}
+
+
+
+
+Post-increment
+// C++ program to demonstrate
+// postfix increment operator overloading
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Integer {
+private:
+	int i;
+
+public:
+	// Parameterised constructor
+	Integer(int i = 0)
+	{
+		this->i = i;
+	}
+
+	// Overloading the postfix operator
+	Integer operator++(int)
+	{
+		Integer temp;
+		temp.i = i++;
+		return temp;
+	}
+
+	// Function to display the value of i
+	void display()
+	{
+		cout << "i = " << i << endl;
+	}
+};
+
+// Driver function
+int main()
+{
+	Integer i1(3);
+
+	cout << "Before increment: ";
+	i1.display();
+
+	// Using the post-increment operator
+	Integer i2 = i1++;
+
+	cout << "After post increment: ";
+	i2.display();
+}
+
+
+
+
+

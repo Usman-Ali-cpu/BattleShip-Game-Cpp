@@ -1,0 +1,6 @@
+1,john smith,1998 25 11,India,122
+4,ricky poct,1999 20 10,USA,165
+2,william ayl,2003 28 10,USA,100
+5,osaaaa ali,2020 7 22,Los,4
+3,messi lieon,1985 12 10,lahore,125
+6,ronaldo chis,2021 7 22,portg,334

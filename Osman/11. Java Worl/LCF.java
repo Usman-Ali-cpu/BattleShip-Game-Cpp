@@ -27,5 +27,4 @@ public class LCF {
         }
         return lcf;
     }
-
 }

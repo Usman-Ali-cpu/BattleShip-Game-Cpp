@@ -1,17 +1,9 @@
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.util.Random;
 
 public class EncryptDecryptFile {
 
-    public static void main(String[] args) {
-        writeDecryptionFile("message");
-        System.out.println(readEncryptionFile());
-
-    }
-
-    public static String encrypt(String str) {
+    public String encrypt(String str) {
+        Random random = new Random();
         String newstr = "";
         for (int i = str.length() - 1; i >= 0; i--) {
             newstr += str.charAt(i);
@@ -19,24 +11,27 @@ public class EncryptDecryptFile {
         return newstr;
     }
 
-    public static String decrypt(String str) {
+    public String decrypt(String str) {
         String newstr = "";
+        Random random = new Random();
         for (int i = str.length() - 1; i >= 0; i--) {
             newstr += str.charAt(i);
         }
         return newstr;
     }
 
-    public static void writeDecryptionFile(String message) {
+    public void writeDecryptionFile(String message) {
+        Scanner sc = new Scanner(System.in);
         try {
-            String strf = "decryption.txt";
-            File myObj = new File(strf);
+            String encryptFilename = "decryption.txt";
+            File myObj = new File(encryptFilename);
             if (myObj.createNewFile()) {
                 System.out.println("File created: " + myObj.getName());
             } else {
                 System.out.println("File already exists.");
             }
-            FileWriter writer = new FileWriter(strf);
+            BufferedWriter writer = new BufferedWriter(new FileWriter(encryptFilename));
+            // FileWriter writer = new FileWriter(encryptFilename);
             String m = encrypt(message);
             writer.write(m);
             writer.close();
@@ -48,10 +43,12 @@ public class EncryptDecryptFile {
 
     }
 
-    public static String readEncryptionFile() {
+    public String readEncryptionFile() {
         String out = "";
         try {
-            FileReader reader = new FileReader("decryption.txt");
+            String decryptFilename = "decryption.txt";
+            BufferedReader reader = new BufferedReader(new FileReader(decryptFilename));
+            FileReader reader = new FileReader(decryptFilename);
             int character;
 
             while ((character = reader.read()) != -1) {

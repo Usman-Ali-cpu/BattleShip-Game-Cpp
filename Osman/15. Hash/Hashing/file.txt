@@ -1,0 +1,9 @@
+Create a class called Hash. It should be able to implement a hash using 
+either what we described as a "vertical" or "horizontal" hash. 
+If a "horizontal" hash is chosen, it should be able to implement at 
+least three of the hashing methods described in the accompanying 
+PDF called hashing methods. It should be a fully developed class 
+that can create a hashed data set, as well as implement all the methods 
+that Java provides in its own HashSet class (Iterator, size, isEmpty, 
+contains, add, remove, clear, clone - https://docs.oracle.com/javase/7/docs/api/java/util/HashSet.html). 
+Make sure to design it using Generics.
